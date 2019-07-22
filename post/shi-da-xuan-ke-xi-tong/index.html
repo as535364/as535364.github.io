@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>ZJ | UJ&#39;s Code</title>
+<title>師大選課系統 | UJ&#39;s Code</title>
 <meta name="description" content="⚡電神習慣裝弱⚡">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://as535364.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -78,54 +84,43 @@
 
 
       <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://as535364.github.io/post-images/shi-da-xuan-ke-xi-tong.png')">
+            </div>
+          
+          <h2 class="post-title">師大選課系統</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-07-22</span>
+            
+          </div>
+          <div class="post-content">
+            <p>讓選課時間 20min 取消</p>
+<!-- more -->
+<p><a href="javascript:countSecond = Infinity;">選課系統</a><br>
+把上面的連接拖到書籤列，進選課系統後再點書籤。</p>
 
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> ZJ
-          </h2> 
+          </div>
         </div>
 
         
-<section class="post-item">
-    <div class="content">
-      <a href="https://as535364.github.io/post/zerojudge-a445">
-        <h2 class="post-title">ZJ::a445: 新手訓練系列- 我的朋友很少</h2>
-      </a>
-      <div class="post-abstract">
-        <p>簡單的 DFS 新手練習，其實還有比較簡潔的作法，個人是另外開了一個 Time 陣列來儲存好友組別，藉以區分有沒有朋友的朋友。</p>
-
+          <div class="next-post">
+            <a class="purple-link" href="https://as535364.github.io/post/zerojudge-a445">
+              <h3 class="post-title">
+                下一篇：ZJ::a445: 新手訓練系列- 我的朋友很少
+              </h3>
+            </a>
+          </div>
+          
       </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2016-07-18</span>
+
+      
         
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://as535364.github.io/tag/1G2QSm8vR">
-                ZJ
-                
-              </a>
-            
-          </span>
+          <div id="gitalk-container"></div>
         
-      </div>
-    </div>
-    
-      <a href="https://as535364.github.io/post/zerojudge-a445">
-        <div class="feature-container" style="background-image: url('https://i.imgur.com/Q8cglDD.jpg')">
-        </div>
-      </a>
-    
-  </section>
 
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+        
+      
 
       <div class="site-footer">
   <div class="slogan">⚡電神習慣裝弱⚡</div>
@@ -159,6 +154,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '2af4efd308a963c9224a ',
+        clientSecret: '4cc344b7d035b1ea1ccd287e06995649abd3a6e2',
+        repo: 'as535364.github.io',
+        owner: 'as535364',
+        admin: ['as535364'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
