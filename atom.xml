@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://as535364.github.io</id>
+    <id>https://code.ujoj.cc</id>
     <title>UJ&apos;s Code</title>
-    <updated>2019-07-22T07:20:01.329Z</updated>
+    <updated>2019-07-22T07:27:41.883Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://as535364.github.io"/>
-    <link rel="self" href="https://as535364.github.io/atom.xml"/>
+    <link rel="alternate" href="https://code.ujoj.cc"/>
+    <link rel="self" href="https://code.ujoj.cc/atom.xml"/>
     <subtitle>⚡電神習慣裝弱⚡</subtitle>
-    <logo>https://as535364.github.io/images/avatar.png</logo>
-    <icon>https://as535364.github.io/favicon.ico</icon>
+    <logo>https://code.ujoj.cc/images/avatar.png</logo>
+    <icon>https://code.ujoj.cc/favicon.ico</icon>
     <rights>All rights reserved 2019, UJ&apos;s Code</rights>
     <entry>
         <title type="html"><![CDATA[師大選課系統]]></title>
-        <id>https://as535364.github.io/post/shi-da-xuan-ke-xi-tong</id>
-        <link href="https://as535364.github.io/post/shi-da-xuan-ke-xi-tong">
+        <id>https://code.ujoj.cc/post/shi-da-xuan-ke-xi-tong</id>
+        <link href="https://code.ujoj.cc/post/shi-da-xuan-ke-xi-tong">
         </link>
         <updated>2019-07-22T07:02:22.000Z</updated>
         <summary type="html"><![CDATA[<p>讓選課時間 20min 取消</p>
@@ -23,8 +23,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[ZJ::a445: 新手訓練系列- 我的朋友很少]]></title>
-        <id>https://as535364.github.io/post/zerojudge-a445</id>
-        <link href="https://as535364.github.io/post/zerojudge-a445">
+        <id>https://code.ujoj.cc/post/zerojudge-a445</id>
+        <link href="https://code.ujoj.cc/post/zerojudge-a445">
         </link>
         <updated>2016-07-18T07:47:00.000Z</updated>
         <summary type="html"><![CDATA[<p>簡單的 DFS 新手練習，其實還有比較簡潔的作法，個人是另外開了一個 Time 陣列來儲存好友組別，藉以區分有沒有朋友的朋友。</p>
