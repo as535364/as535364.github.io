@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://as535364.github.io</id>
+    <title>UJ&apos;s Code</title>
+    <updated>2019-07-22T06:46:47.035Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://as535364.github.io"/>
+    <link rel="self" href="https://as535364.github.io/atom.xml"/>
+    <subtitle>⚡電神習慣裝弱⚡</subtitle>
+    <logo>https://as535364.github.io/images/avatar.png</logo>
+    <icon>https://as535364.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2019, UJ&apos;s Code</rights>
+    <entry>
+        <title type="html"><![CDATA[ZJ::a445: 新手訓練系列- 我的朋友很少]]></title>
+        <id>https://as535364.github.io/post/zerojudge-a445</id>
+        <link href="https://as535364.github.io/post/zerojudge-a445">
+        </link>
+        <updated>2016-07-18T07:47:00.000Z</updated>
+    </entry>
+</feed>
