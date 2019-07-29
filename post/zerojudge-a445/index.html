@@ -1,31 +1,16 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
-<title>ZJ::a445: 新手訓練系列- 我的朋友很少 | UJ&#39;s Code</title>
-<meta name="description" content="⚡電神習慣裝弱⚡">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://code.ujoj.cc/favicon.ico?v=1563780751778">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UJ&#39;s Code</title>
+<meta name="description" content="⚡電神習慣裝弱⚡" />
+<link rel="shortcut icon" href="https://code.ujoj.cc/favicon.ico?v=1564376465384">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://code.ujoj.cc/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37432468-3"></script>
@@ -40,87 +25,98 @@
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://code.ujoj.cc">
-        <img class="avatar" src="https://code.ujoj.cc/images/avatar.png?v=1563780751778" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://code.ujoj.cc">
-        <h1 class="site-title">UJ&#39;s Code</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://code.ujoj.cc">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://code.ujoj.cc/images/avatar.png?v=1564376465384" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">UJ&#39;s Code</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#a445-%E6%96%B0%E6%89%8B%E8%A8%93%E7%B7%B4%E7%B3%BB%E5%88%97-%E6%88%91%E7%9A%84%E6%9C%8B%E5%8F%8B%E5%BE%88%E5%B0%91">a445: 新手訓練系列- 我的朋友很少:</a>
+<ul>
+<li><a href="#%E5%85%A7%E5%AE%B9"><strong>內容：</strong></a></li>
+<li><a href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E"><strong>輸入說明：</strong></a></li>
+<li><a href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E"><strong>輸出說明：</strong></a></li>
+<li><a href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA%E4%B8%80%E8%A1%8C%E4%B8%80%E5%80%8B%E8%BC%B8%E5%87%BA"><strong>範例輸出:(一行一個輸出)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
     </div>
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
       
-        
-          <a href="/archives" class="menu purple-link">
-            歸檔
-          </a>
-        
+        <a href="/archives" class="menu" style="animation-delay: 0s">
+          歸檔
+        </a>
       
-        
-          <a href="/tags" class="menu purple-link">
-            標籤
-          </a>
-        
+    
       
-        
-          <a href="/post/about" class="menu purple-link">
-            關於
-          </a>
-        
+        <a href="/tags" class="menu" style="animation-delay: 0.2s">
+          標籤
+        </a>
       
-        
-          <a href="/post/programing-resources" class="menu purple-link">
-            程式競賽
-          </a>
-        
+    
       
-        
-          <a href="/post/links" class="menu purple-link">
-            交換連結
-          </a>
-        
+        <a href="/post/about" class="menu" style="animation-delay: 0.4s">
+          關於
+        </a>
       
-    </div>
+    
+      
+        <a href="/post/programing-resources" class="menu" style="animation-delay: 0.6000000000000001s">
+          程式競賽
+        </a>
+      
+    
+      
+        <a href="/post/links" class="menu" style="animation-delay: 0.8s">
+          交換連結
+        </a>
+      
+    
   </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://i.imgur.com/Q8cglDD.jpg')">
-            </div>
-          
-          <h2 class="post-title">ZJ::a445: 新手訓練系列- 我的朋友很少</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2016-07-18</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://code.ujoj.cc/tag/1G2QSm8vR">
-                    ZJ
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>簡單的 DFS 新手練習，其實還有比較簡潔的作法，個人是另外開了一個 Time 陣列來儲存好友組別，藉以區分有沒有朋友的朋友。</p>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script></div>
+    <a class="rss" href="https://code.ujoj.cc/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">ZJ::a445: 新手訓練系列- 我的朋友很少</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2016-07-18 / 2 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://i.imgur.com/Q8cglDD.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>簡單的 DFS 新手練習，其實還有比較簡潔的作法，個人是另外開了一個 Time 陣列來儲存好友組別，藉以區分有沒有朋友的朋友。</p>
 <!-- more -->
 <h2 id="a445-新手訓練系列-我的朋友很少">a445: 新手訓練系列- 我的朋友很少:</h2>
 <h3 id="內容"><strong>內容：</strong></h3>
@@ -244,79 +240,157 @@ int main(){
 </code></pre>
 <p><a href="http://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=50454270">pixiv</a></p>
 
-          </div>
         </div>
 
         
-      </div>
-
-      
-        
-          <div id="gitalk-container"></div>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://code.ujoj.cc/tag/1G2QSm8vR">
+            <span class="flex-auto">ZJ</span>
+          </a>
         
 
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://code.ujoj.cc/post/shi-da-xuan-ke-xi-tong">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  師大選課系統
+                </h3>
+              </a>
+            </div>
+          
+
+          
+        </div>
+
         
-      
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-      <div class="site-footer">
-  <div class="slogan">⚡電神習慣裝弱⚡</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script> | <a class="rss" href="https://code.ujoj.cc/atom.xml" target="_blank">RSS</a>
-</div>
+<div id="gitalk-container"></div>
 
+<script>
 
-    </div>
-    <script type="application/javascript">
+  var gitalk = new Gitalk({
+    clientID: '2af4efd308a963c9224a ',
+    clientSecret: '4cc344b7d035b1ea1ccd287e06995649abd3a6e2',
+    repo: 'as535364.github.io',
+    owner: 'as535364',
+    admin: ['as535364'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.min.js"></script>  
+<script>
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
   
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '2af4efd308a963c9224a ',
-        clientSecret: '4cc344b7d035b1ea1ccd287e06995649abd3a6e2',
-        repo: 'as535364.github.io',
-        owner: 'as535364',
-        admin: ['as535364'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
-
-
-
-
   </body>
 </html>
