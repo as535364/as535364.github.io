@@ -39,24 +39,34 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目錄
+            ⚡電神習慣裝弱⚡
           </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#a445-%E6%96%B0%E6%89%8B%E8%A8%93%E7%B7%B4%E7%B3%BB%E5%88%97-%E6%88%91%E7%9A%84%E6%9C%8B%E5%8F%8B%E5%BE%88%E5%B0%91">a445: 新手訓練系列- 我的朋友很少:</a>
-<ul>
-<li><a href="#%E5%85%A7%E5%AE%B9"><strong>內容：</strong></a></li>
-<li><a href="#%E8%BC%B8%E5%85%A5%E8%AA%AA%E6%98%8E"><strong>輸入說明：</strong></a></li>
-<li><a href="#%E8%BC%B8%E5%87%BA%E8%AA%AA%E6%98%8E"><strong>輸出說明：</strong></a></li>
-<li><a href="#%E7%AF%84%E4%BE%8B%E8%BC%B8%E5%87%BA%E4%B8%80%E8%A1%8C%E4%B8%80%E5%80%8B%E8%BC%B8%E5%87%BA"><strong>範例輸出:(一行一個輸出)</strong></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
+            
+              
+                <a href="https://github.com/as535364" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
+                  <i class="remixicon-github-line"></i>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
           </div>
         </div>
       
@@ -107,190 +117,36 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">ZJ::a445: 新手訓練系列- 我的朋友很少</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2016-07-18 / 2 min read
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="remixicon-bookmark-line"></i> Security
+        </h2>
+        
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
+    
+      <a href="https://code.ujoj.cc/post/ais3-2019-day1" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://code.ujoj.cc/post-images/ais3-2019-day1.jpg'">
         </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://i.imgur.com/Q8cglDD.jpg" alt="">
-        
-        <div class="post-content yue">
-          <p>簡單的 DFS 新手練習，其實還有比較簡潔的作法，個人是另外開了一個 Time 陣列來儲存好友組別，藉以區分有沒有朋友的朋友。</p>
-<!-- more -->
-<h2 id="a445-新手訓練系列-我的朋友很少">a445: 新手訓練系列- 我的朋友很少:</h2>
-<h3 id="內容"><strong>內容：</strong></h3>
-<p>我的朋友很少~ 但是朋友的朋友就是我的朋友!</p>
-<h3 id="輸入說明"><strong>輸入說明：</strong></h3>
-<p>第一行有三個正整數 N , M , Q ( N &lt;= 10000 , M &lt;= 10000 , Q &lt;= 100000 )</p>
-<p>代表有 N 個人 , M 筆朋友關係 , Q 筆詢問</p>
-<p>接下來有 M 行， 每行有兩個正整數  A , B ( A,B &lt;= N )</p>
-<p>代表 A 和 B 有 朋友 關係</p>
-<p>再來有 Q 行， 每行兩個正整數  P , Q ( A,B &lt;= N )</p>
-<h3 id="輸出說明"><strong>輸出說明：</strong></h3>
-<p>請輸出 P 和 Q 是不是朋友</p>
-<p>如果是請輸出  &quot;:)&quot;</p>
-<p>否則請輸出  &quot;:(&quot;<br>
-範例輸入 ： help</p>
-<pre>
-5 3 2
-1 2
-2 5
-3 4
-1 5
-1 3 
-</pre>
-<h3 id="範例輸出一行一個輸出"><strong>範例輸出:(一行一個輸出)</strong></h3>
-<pre>
-:)
-:(
-</pre>
-<p>DFS 解</p>
-<pre><code class="language-cpp">#include&lt;stdio.h&gt;
-#include&lt;vector&gt;
-using namespace std;
-vector &lt;int&gt;ship[10001];
-int q,m,n;
-int a,b;
-int color[10001]={0};
-int Time[10001]={0};
-int tmp_time = 0;
-int tmp_a,tmp_b;
-void dfs(int x,int y);
-int main(){
-	scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;q);
-	// 朋友關係 
-	for(int i=0;i&lt;m;i++){
-		scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-		ship[a].push_back(b);
-		ship[b].push_back(a);	
-	}
-	//遍歷 &amp;&amp; 設定 time
-	 
-	for(int i=1;i&lt;=n;i++){
-		if(color[i]==0)dfs(i,tmp_time);
-		tmp_time ++;
-	}
-	// 判斷 time 是否相等 
-	for(int i=0;i&lt;q;i++){
-		scanf(&quot;%d%d&quot;,&amp;tmp_a,&amp;tmp_b);
-		if( Time[tmp_a] == Time[tmp_b] )printf(&quot;:)\n&quot;);
-		else printf(&quot;:(\n&quot;);
-	}
-}
-// DFS
-void dfs(int x,int y){
-	color[x] = 1;
-	Time[x] = y;
-	for(int i=0;i&lt;ship[x].size() ;i++){
-		int tmp = ship[x][i];
-		if(color[tmp]==0)dfs(tmp,y);
-	}
-}
+      </a>
+    
+    <div class="content">
+      <a href="https://code.ujoj.cc/post/ais3-2019-day1">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">AIS3 Day1</h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <h2 id="住宿">住宿</h2>
+<p>從今天開始，是 AIS3 2019 的第一天，其實昨天就入住交大十舍（男生）、竹軒（女生）。昨天在交誼廳看作業看到 0 點，發現 0 點宿舍就會熄燈（在此譴責交大十舍房間內沒有任何燈具…）<br>
+這邊先附上 <strong><a href="https://hackmd.io/pybMD-TBQomVmbPDNdp-Xg">共筆</a></strong></p>
 
-</code></pre>
-<p>另解：disjoint set</p>
-<pre><code class="language-cpp">#include &lt;stdio.h&gt;
-#include &lt;algorithm&gt;
-#define MAXN 1000005
-int parent[MAXN];//每個點紀錄其父母節點
-int size[MAXN];//每個點紀錄以它為根的子樹的大小
-int n,m,q;
-int tmp_a,tmp_b;
-int a,b;
-void MAKE_SET(int x){
-    parent[x]=x;
-    size[x]=1;
-}
-void init(int n){
-    for(int i=0;i&lt;n;++i){
-        MAKE_SET(i);
-    }
-}
-int FIND_SET(int x){
-    if(parent[x]==x)return x;
-    parent[x]=FIND_SET(parent[x]);
-    return parent[x];
-}
-bool UNION(int x,int y){
-    x=FIND_SET(x);
-    y=FIND_SET(y);
-    if(x==y)return false;
-    if(size[x]&lt;size[y]){
-        std::swap(x,y);
-    }
-    parent[y]=x;
-    size[x]+=size[y];
-    return true;
-}
-int main(){
-	scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;q);
-	init(n);
-	for(int i=0;i&lt;m;i++){
-		scanf(&quot;%d%d&quot;,&amp;tmp_a,&amp;tmp_b);
-		UNION(tmp_a,tmp_b);
-	}
-	for(int i=0;i&lt;q;i++){
-		scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-		if( FIND_SET(a) == FIND_SET(b) )printf(&quot;:)\n&quot;);
-		else printf(&quot;:(\n&quot;);
-	}
-}
+      </div>
+      <div class="text-gray-400 text-sm font-light">2019-07-29 / 1 min read</div>
+    </div>
+  </section>
 
-</code></pre>
-<p><a href="http://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=50454270">pixiv</a></p>
-
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://code.ujoj.cc/tag/1G2QSm8vR">
-            <span class="flex-auto">ZJ</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://code.ujoj.cc/post/shi-da-xuan-ke-xi-tong">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  師大選課系統
-                </h3>
-              </a>
-            </div>
-          
-
-          
-        </div>
-
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: 'a25ffd96f78b9ac93044',
-    clientSecret: 'e88702767c8e3621800cfdc1b0cee04e69ecfd99',
-    repo: 'as535364.github.io',
-    owner: 'as535364',
-    admin: ['as535364'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
-
-          
-        
+        <div class="pagination-container animated fadeIn">
+  
+  
+</div>
 
       </div>
     </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://code.ujoj.cc</id>
     <title>UJ&apos;s Code</title>
-    <updated>2019-07-29T15:45:37.367Z</updated>
+    <updated>2019-07-29T15:48:38.694Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://code.ujoj.cc"/>
     <link rel="self" href="https://code.ujoj.cc/atom.xml"/>
@@ -16,9 +16,13 @@
         <link href="https://code.ujoj.cc/post/ais3-2019-day1">
         </link>
         <updated>2019-07-29T14:00:01.000Z</updated>
-        <summary type="html"><![CDATA[<p><img src="https://i.imgur.com/7aF1ouD.jpg" alt=""></p>
+        <summary type="html"><![CDATA[<h2 id="住宿">住宿</h2>
+<p>從今天開始，是 AIS3 2019 的第一天，其實昨天就入住交大十舍（男生）、竹軒（女生）。昨天在交誼廳看作業看到 0 點，發現 0 點宿舍就會熄燈（在此譴責交大十舍房間內沒有任何燈具…）<br>
+這邊先附上 <strong><a href="https://hackmd.io/pybMD-TBQomVmbPDNdp-Xg">共筆</a></strong></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><img src="https://i.imgur.com/7aF1ouD.jpg" alt=""></p>
+        <content type="html"><![CDATA[<h2 id="住宿">住宿</h2>
+<p>從今天開始，是 AIS3 2019 的第一天，其實昨天就入住交大十舍（男生）、竹軒（女生）。昨天在交誼廳看作業看到 0 點，發現 0 點宿舍就會熄燈（在此譴責交大十舍房間內沒有任何燈具…）<br>
+這邊先附上 <strong><a href="https://hackmd.io/pybMD-TBQomVmbPDNdp-Xg">共筆</a></strong></p>
 ]]></content>
     </entry>
     <entry>
